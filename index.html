@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mount Garibaldi — A Field Guide to Nch'ḵay̓, the Volcano Above Squamish, BC</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A portrait of Mount Garibaldi — Nch'ḵay̓ — the glaciated volcano the whole park is named for: why Atwell Peak's dark pyramid looks the way it does, the fire-against-ice story geologists tell, the Squamish Nation's history of the mountain, five favourite places to see it, and the honest truth that climbing it is mountaineering.">
+<link rel="canonical" href="https://mountgaribaldi.com/">
+<meta property="og:title" content="Mount Garibaldi — A Field Guide to Nch'ḵay̓, the Volcano Above Squamish, BC">
+<meta property="og:description" content="Not a trail guide — a portrait of the mountain. The volcano story, the Squamish Nation's history of Nch'ḵay̓, five places to see it properly, and why most people who love this peak never stand on it.">
+<meta property="og:url" content="https://mountgaribaldi.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --basalt: #151317;         /* volcanic charcoal, the page ground */
+    --basalt-2: #1c191e;       /* raised panels */
+    --basalt-3: #241f26;       /* borders-adjacent surfaces */
+    --ash: #2e2830;            /* deep rule */
+    --ash-line: #3a333c;       /* hairline on dark */
+    --glacier: #f2efe9;        /* glacier white — primary text */
+    --glacier-dim: #cfc9c4;    /* body text */
+    --mute: #8d8489;           /* metadata */
+    --rose: #cf8f97;           /* ash-rose alpenglow — the accent */
+    --rose-deep: #a96a74;
+    --rose-faint: rgba(207,143,151,.14);
+    --ice: #b9c8d2;            /* glacier shadow blue */
+    --paper: #f2eee7;          /* one warm-paper interlude section */
+    --paper-ink: #1c1917;
+    --paper-soft: #4a443d;
+    --paper-rule: #ddd5c7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--basalt); color: var(--glacier-dim);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--rose); color: var(--basalt); }
+
+  a { color: inherit; text-decoration: none; }
+  .ln { border-bottom: 1px solid var(--ash-line); transition: border-color .2s, color .2s; }
+  .ln:hover { border-bottom-color: var(--rose); color: var(--rose); }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 400; line-height: 1.08; letter-spacing: -0.02em;
+    margin: 0; color: var(--glacier);
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 { font-size: clamp(3rem, 7.5vw, 5.8rem); letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); }
+  h3 { font-size: 1.25rem; font-weight: 500; line-height: 1.3; }
+  p { margin: 0 0 1.1rem; color: var(--glacier-dim); font-size: 1.04rem; }
+
+  .wrap { max-width: 1150px; margin: 0 auto; padding: 0 1.5rem; }
+  .narrow { max-width: 730px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: .9rem;
+    font-size: .68rem; letter-spacing: .28em; text-transform: uppercase;
+    font-weight: 600; color: var(--rose);
+    margin-bottom: 1.1rem;
+  }
+  .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--rose-deep); }
+
+  /* ---------- NAV ---------- */
+  nav.top {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(21,19,23,.82);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    border-bottom: 1px solid var(--ash);
+  }
+  nav.top .inner {
+    max-width: 1150px; margin: 0 auto;
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: .9rem 1.5rem;
+  }
+  .wordmark { font-family: "Fraunces", serif; font-size: 1.08rem; font-weight: 500; letter-spacing: -0.01em; color: var(--glacier); }
+  .wordmark em { font-style: italic; color: var(--rose); }
+  .wordmark small {
+    display: block; font-family: "Inter", sans-serif; font-weight: 500;
+    font-size: .57rem; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--mute); margin-top: .2rem;
+  }
+  nav.top .links { display: flex; gap: 1.5rem; }
+  nav.top .links a {
+    font-size: .7rem; letter-spacing: .16em; text-transform: uppercase;
+    font-weight: 600; color: var(--glacier-dim);
+  }
+  nav.top .links a:hover { color: var(--rose); }
+  @media (max-width: 860px) { nav.top .links { display: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero { border-bottom: 1px solid var(--ash); background: #0f0d12; }
+  .hero svg { display: block; width: 100%; height: auto; }
+
+  /* ---------- MASTHEAD (asymmetric: title left, spec card right) ---------- */
+  header.mast { padding: 5rem 0 4.5rem; border-bottom: 1px solid var(--ash); }
+  .mast-grid { display: grid; grid-template-columns: 1.6fr .9fr; gap: 4rem; align-items: end; }
+  @media (max-width: 900px) { .mast-grid { grid-template-columns: 1fr; gap: 2.6rem; align-items: start; } }
+  .mast .kicker {
+    font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+    font-weight: 600; color: var(--rose); margin-bottom: 1.5rem;
+  }
+  .mast .native {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem); color: var(--mute);
+    margin-top: .9rem; letter-spacing: .01em;
+  }
+  .mast .native b { font-weight: 500; font-style: normal; color: var(--glacier); }
+  .mast .deck {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: clamp(1.15rem, 2.1vw, 1.45rem); line-height: 1.52;
+    color: var(--glacier-dim); max-width: 50ch; margin: 1.6rem 0 0;
+    font-variation-settings: "opsz" 40, "SOFT" 30;
+  }
+  .spec {
+    border: 1px solid var(--ash-line); background: var(--basalt-2);
+    padding: 1.6rem 1.5rem 1.2rem;
+  }
+  .spec .spec-title {
+    font-size: .62rem; letter-spacing: .26em; text-transform: uppercase;
+    font-weight: 700; color: var(--rose); margin-bottom: 1rem;
+    padding-bottom: .8rem; border-bottom: 1px solid var(--ash);
+  }
+  .spec dl { margin: 0; }
+  .spec .row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--ash); }
+  .spec .row:last-child { border-bottom: none; }
+  .spec dt { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--mute); }
+  .spec dd { margin: 0; font-family: "Fraunces", serif; font-size: .98rem; color: var(--glacier); text-align: right; }
+
+  /* ---------- ESSAY ---------- */
+  section.essay { padding: 6.5rem 0 5rem; }
+  .essay p { font-size: 1.1rem; line-height: 1.8; }
+  .essay p.opener::first-letter {
+    font-family: "Fraunces", serif;
+    font-size: 4.8rem; line-height: .78;
+    float: left; padding: .45rem .85rem 0 0;
+    color: var(--rose); font-weight: 400;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  .pull {
+    margin: 3.4rem 0; padding: 2.3rem 0;
+    border-top: 1px solid var(--ash-line); border-bottom: 1px solid var(--ash-line);
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: clamp(1.35rem, 2.6vw, 1.85rem); line-height: 1.45;
+    color: var(--glacier); text-align: center;
+    font-variation-settings: "opsz" 60, "SOFT" 30;
+  }
+  .pull .who { display: block; margin-top: 1rem; font-family: "Inter", sans-serif; font-style: normal; font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
+
+  /* ---------- NCH'KAY (paper interlude — the one light section) ---------- */
+  section.nchkay { background: var(--paper); color: var(--paper-soft); padding: 6.5rem 0; border-top: 1px solid var(--ash); }
+  .nchkay h2, .nchkay h3 { color: var(--paper-ink); }
+  .nchkay p { color: var(--paper-soft); font-size: 1.08rem; line-height: 1.8; }
+  .nchkay .eyebrow { color: var(--rose-deep); }
+  .nchkay .eyebrow::before { background: var(--rose-deep); }
+  .nchkay-grid { display: grid; grid-template-columns: .9fr 1.5fr; gap: 3.6rem; align-items: start; }
+  @media (max-width: 880px) { .nchkay-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .nchkay .bigword {
+    font-family: "Fraunces", serif; font-weight: 300; font-style: italic;
+    font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.05; color: var(--paper-ink);
+    letter-spacing: -0.02em; margin-top: .6rem;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  .nchkay .gloss { font-size: .82rem; letter-spacing: .06em; color: #857c70; margin-top: 1rem; line-height: 1.6; }
+  .nchkay .source-note {
+    margin-top: 2.2rem; padding: 1.3rem 1.4rem;
+    border: 1px solid var(--paper-rule); border-left: 3px solid var(--rose-deep);
+    background: #ece6db; font-size: .93rem; color: var(--paper-soft);
+  }
+  .nchkay .source-note strong { display: block; font-size: .62rem; letter-spacing: .24em; text-transform: uppercase; color: var(--rose-deep); margin-bottom: .45rem; font-weight: 700; }
+  .nchkay .source-note a { border-bottom: 1px solid #c9bfae; }
+  .nchkay .source-note a:hover { color: var(--rose-deep); border-bottom-color: var(--rose-deep); }
+
+  /* ---------- TIMELINE STRIP ---------- */
+  section.timeline { padding: 6rem 0; border-bottom: 1px solid var(--ash); }
+  .tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2.6rem; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 0; right: 0; top: 5px; height: 1px; background: var(--ash-line); }
+  @media (max-width: 860px) { .tl { grid-template-columns: 1fr; gap: 1.6rem; } .tl::before { display: none; } }
+  .tl .node { padding: 0 1.6rem 0 0; position: relative; }
+  .tl .node::before { content: ""; position: absolute; top: 0; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--basalt); border: 1.5px solid var(--rose); }
+  .tl .when { font-family: "Fraunces", serif; font-style: italic; font-size: 1.02rem; color: var(--rose); margin: 1.3rem 0 .55rem; }
+  .tl h3 { font-size: 1.08rem; margin-bottom: .5rem; }
+  .tl p { font-size: .9rem; line-height: 1.65; color: var(--glacier-dim); margin: 0; }
+
+  /* ---------- FIRE & ICE (geology) ---------- */
+  section.geology { padding: 6rem 0; }
+  .geo-grid { display: grid; grid-template-columns: 1.5fr .85fr; gap: 3.6rem; align-items: start; }
+  @media (max-width: 880px) { .geo-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .geo-aside {
+    border: 1px solid var(--ash-line); background: var(--basalt-2);
+    padding: 1.7rem 1.6rem;
+  }
+  .geo-aside strong { display: block; font-size: .62rem; letter-spacing: .24em; text-transform: uppercase; color: var(--rose); margin-bottom: .7rem; font-weight: 700; }
+  .geo-aside p { font-size: .92rem; margin-bottom: .9rem; }
+  .geo-aside p:last-child { margin-bottom: 0; }
+
+  /* ---------- FIVE VANTAGES (the centerpiece) ---------- */
+  section.vantages { padding: 6.5rem 0; background: var(--basalt-2); border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash); }
+  .vantages .head { max-width: 730px; margin: 0 auto 3.4rem; padding: 0 1.5rem; text-align: center; }
+  .vantages .head .eyebrow { justify-content: center; }
+  .vantages .head .eyebrow::before { display: none; }
+  .vantage-list { max-width: 950px; margin: 0 auto; padding: 0 1.5rem; }
+  .vantage {
+    display: grid; grid-template-columns: 6.5rem 1fr; gap: 2.2rem;
+    padding: 2.6rem 0; border-top: 1px solid var(--ash-line);
+    align-items: start;
+  }
+  .vantage:last-child { border-bottom: 1px solid var(--ash-line); }
+  @media (max-width: 640px) { .vantage { grid-template-columns: 1fr; gap: .8rem; padding: 2.2rem 0; } }
+  .vantage .no {
+    font-family: "Fraunces", serif; font-weight: 300; font-style: italic;
+    font-size: 3.4rem; line-height: 1; color: var(--rose);
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  .vantage .no small { display: block; font-family: "Inter", sans-serif; font-style: normal; font-size: .58rem; letter-spacing: .24em; text-transform: uppercase; color: var(--mute); font-weight: 600; margin-top: .55rem; }
+  .vantage h3 { font-size: 1.45rem; margin-bottom: .7rem; }
+  .vantage p { font-size: 1rem; margin-bottom: .7rem; }
+  .vantage .effort { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--mute); }
+  .vantage .effort b { color: var(--ice); font-weight: 600; }
+
+  /* ---------- CLIMBING ---------- */
+  section.climbing { padding: 6.5rem 0; }
+  .climb-warn {
+    margin-top: 2.4rem; padding: 1.5rem 1.6rem;
+    border: 1px solid rgba(207,143,151,.4); background: var(--rose-faint);
+    font-size: .95rem; color: var(--glacier);
+  }
+  .climb-warn strong { display: block; font-size: .63rem; letter-spacing: .24em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; font-weight: 700; }
+
+  /* ---------- WATER (funnel) ---------- */
+  section.water { padding: 6.5rem 0; background: linear-gradient(180deg, var(--basalt-2), #1a1420); border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash); }
+  .water-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3.5rem; align-items: center; }
+  @media (max-width: 880px) { .water-grid { grid-template-columns: 1fr; gap: 2.4rem; } }
+  .water .cta-card {
+    border: 1px solid var(--ash-line); background: rgba(21,19,23,.55);
+    padding: 2rem 1.8rem;
+  }
+  .water .cta-card h3 { margin-bottom: .7rem; }
+  .water .cta-card p { font-size: .95rem; }
+  .water .cta {
+    display: inline-block; margin-top: .6rem; padding: .65rem 1.5rem;
+    border: 1px solid var(--rose); border-radius: 999px;
+    font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 700;
+    color: var(--rose); transition: all .2s;
+  }
+  .water .cta:hover { background: var(--rose); color: var(--basalt); }
+  .water .aside-ln { display: block; margin-top: 1.1rem; font-size: .85rem; color: var(--mute); }
+
+  /* ---------- FAQ ---------- */
+  section.faq { padding: 6rem 0 6.5rem; }
+  .faq-list { margin-top: 2.2rem; border-top: 1px solid var(--ash-line); }
+  details.qa { border-bottom: 1px solid var(--ash); }
+  details.qa > summary {
+    list-style: none; cursor: pointer; padding: 1.35rem 0;
+    display: grid; grid-template-columns: 1fr 1.6rem; gap: 1rem; align-items: baseline;
+    font-family: "Fraunces", serif; font-weight: 500; font-size: 1.18rem; line-height: 1.35;
+    color: var(--glacier);
+  }
+  details.qa > summary::-webkit-details-marker { display: none; }
+  details.qa > summary:hover { color: var(--rose); }
+  .qa .tick { font-family: "Inter", sans-serif; font-weight: 300; font-size: 1.4rem; color: var(--mute); justify-self: end; transition: transform .2s; line-height: 1; }
+  details.qa[open] .tick { transform: rotate(45deg); }
+  .qa .ans { padding: 0 0 1.6rem; }
+  .qa .ans p { font-size: 1rem; }
+
+  /* ---------- FOOTER ---------- */
+  footer.colophon { background: #0f0d12; color: var(--glacier-dim); padding: 4.5rem 0 2.5rem; border-top: 1px solid var(--ash); }
+  .colophon a:hover { color: var(--glacier); }
+  .col-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+  @media (max-width: 720px) { .col-grid { grid-template-columns: 1fr; } }
+  .col-grid h4 { font-family: "Inter", sans-serif; font-size: .63rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rose); font-weight: 700; margin: 0 0 .9rem; }
+  .col-grid p { font-size: .92rem; margin: 0; }
+  .col-grid ul { list-style: none; margin: 0; padding: 0; }
+  .col-grid li { margin-bottom: .45rem; font-size: .92rem; }
+  .territory {
+    border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash);
+    padding: 1.6rem 0; margin-bottom: 1.6rem;
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--glacier); text-align: center; line-height: 1.6;
+  }
+  .col-bottom { padding-top: .4rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .76rem; color: var(--mute); }
+  .col-bottom em { font-family: "Fraunces", serif; }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="top">
+  <div class="inner">
+    <a href="https://seatoskytrails.com/" class="wordmark">
+      Mount <em>Garibaldi</em>
+      <small>A Sea to Sky Trails mountain portrait</small>
+    </a>
+    <div class="links">
+      <a href="#portrait">The Portrait</a>
+      <a href="#nchkay">Nch'ḵay̓</a>
+      <a href="#fireice">Fire &amp; Ice</a>
+      <a href="#vantages">Where to Look</a>
+      <a href="#climbing">Climbing</a>
+      <a href="#faq">Questions</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO SCENE ===================== -->
+<div class="hero" aria-hidden="false">
+  <svg viewBox="0 0 1440 600" role="img" aria-label="Illustration of Mount Garibaldi seen from the Squamish estuary at dusk: the dark pyramid of Atwell Peak and the broad Dalton Dome carry hanging glaciers above a forested bench, with tide channels winding through estuary grass in the foreground." preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="duskSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#141220"/>
+        <stop offset="0.5" stop-color="#3a2a3c"/>
+        <stop offset="0.78" stop-color="#8a5364"/>
+        <stop offset="1" stop-color="#cf8f97"/>
+      </linearGradient>
+      <linearGradient id="glacierFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f2efe9"/>
+        <stop offset="1" stop-color="#c9ccd6"/>
+      </linearGradient>
+      <linearGradient id="channel" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#c98f9a"/>
+        <stop offset="1" stop-color="#5c4453"/>
+      </linearGradient>
+      <linearGradient id="flats" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#332a33"/>
+        <stop offset="1" stop-color="#201a22"/>
+      </linearGradient>
+    </defs>
+
+    <!-- sky -->
+    <rect x="0" y="0" width="1440" height="600" fill="url(#duskSky)"/>
+    <!-- early stars -->
+    <g fill="#f2efe9" opacity="0.5">
+      <circle cx="120" cy="64" r="1.3"/><circle cx="380" cy="40" r="1.1"/><circle cx="610" cy="82" r="1.2"/>
+      <circle cx="840" cy="36" r="1.4"/><circle cx="1090" cy="70" r="1.1"/><circle cx="1290" cy="44" r="1.3"/>
+      <circle cx="220" cy="120" r="1"/><circle cx="1390" cy="96" r="1"/>
+    </g>
+    <!-- thin dusk cloud bands -->
+    <g stroke="#cf8f97" stroke-linecap="round" fill="none" opacity="0.4">
+      <path d="M90 180 H340" stroke-width="2.4"/>
+      <path d="M180 200 H300" stroke-width="1.6"/>
+      <path d="M1080 168 H1360" stroke-width="2.2"/>
+      <path d="M1180 190 H1300" stroke-width="1.5"/>
+    </g>
+
+    <!-- THE MASSIF: Atwell's sharp dark pyramid (left of centre) + broad Dalton Dome (right), one connected wall -->
+    <path d="M180 600 L180 420 L300 380 L420 330 L540 250 L610 118 L668 210 L724 186 L800 152 L890 178 L980 214 L1090 262 L1220 320 L1440 392 L1440 600 Z" fill="#1a161c"/>
+    <!-- Atwell pyramid: alpenglow catching the west face -->
+    <path d="M540 250 L610 118 L668 210 L640 214 L610 150 L570 240 Z" fill="#8a5364"/>
+    <!-- Atwell east face, near-black -->
+    <path d="M610 118 L668 210 L724 186 L676 156 Z" fill="#0f0c11"/>
+    <!-- rock ribs on the south face -->
+    <g stroke="#3a2a3c" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.85">
+      <path d="M586 200 L560 268 L544 316"/>
+      <path d="M618 170 L604 250 L590 320"/>
+      <path d="M648 196 L646 266 L636 330"/>
+    </g>
+
+    <!-- Dalton Dome summit snows -->
+    <path d="M760 170 L800 152 L890 178 L862 196 L836 184 L806 196 L780 184 Z" fill="url(#glacierFill)"/>
+    <!-- hanging glaciers draped off the dome and shoulder -->
+    <path d="M806 196 L862 196 L900 226 L872 236 L884 268 L846 250 L826 278 L812 240 L788 226 Z" fill="url(#glacierFill)"/>
+    <path d="M900 226 L968 246 L1010 278 L972 282 L988 310 L944 292 L928 262 Z" fill="url(#glacierFill)" opacity="0.92"/>
+    <path d="M700 214 L744 224 L724 252 L748 268 L710 262 L692 238 Z" fill="url(#glacierFill)" opacity="0.85"/>
+    <!-- icefall below the dome -->
+    <path d="M1010 278 L1064 300 L1042 314 L1078 334 L1030 330 L1006 306 Z" fill="url(#glacierFill)" opacity="0.7"/>
+    <!-- crevasse strokes -->
+    <g stroke="#8fa2b4" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.75">
+      <path d="M816 226 C834 218 854 214 872 216"/>
+      <path d="M804 246 C826 238 850 234 870 238"/>
+      <path d="M922 258 C940 252 958 250 974 254"/>
+      <path d="M936 280 C952 274 968 274 982 278"/>
+      <path d="M710 238 C722 232 734 232 744 236"/>
+    </g>
+    <!-- bergschrund line under the dome snowcap -->
+    <path d="M792 200 C816 208 844 210 866 204" stroke="#5c6b80" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- mid-distance forested bench below the massif -->
+    <path d="M0 448 L140 420 L300 434 L460 408 L640 428 L820 410 L1000 432 L1180 416 L1440 440 L1440 600 L0 600 Z" fill="#241d26"/>
+    <!-- conifer texture on the bench, spiky strokes -->
+    <g stroke="#171219" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9">
+      <path d="M180 430 l0 -16 M176 422 l4 -8 4 8 M173 428 l7 -12 7 12"/>
+      <path d="M356 424 l0 -15 M352 417 l4 -8 4 8 M349 423 l7 -12 7 12"/>
+      <path d="M540 420 l0 -16 M536 412 l4 -8 4 8 M533 418 l7 -12 7 12"/>
+      <path d="M760 416 l0 -15 M756 409 l4 -8 4 8 M753 415 l7 -12 7 12"/>
+      <path d="M948 426 l0 -16 M944 418 l4 -8 4 8 M941 424 l7 -12 7 12"/>
+      <path d="M1150 420 l0 -15 M1146 413 l4 -8 4 8 M1143 419 l7 -12 7 12"/>
+      <path d="M1310 430 l0 -16 M1306 422 l4 -8 4 8 M1303 428 l7 -12 7 12"/>
+    </g>
+
+    <!-- estuary flats -->
+    <path d="M0 486 C220 470 420 482 660 474 C900 466 1120 482 1440 472 L1440 600 L0 600 Z" fill="url(#flats)"/>
+
+    <!-- tide channels winding through the flats, catching the sky -->
+    <path d="M-20 560 C160 540 240 552 340 534 C440 516 470 528 560 512 C640 498 660 506 730 494 C790 484 810 490 860 482" fill="none" stroke="url(#channel)" stroke-width="26" stroke-linecap="round" opacity="0.9"/>
+    <path d="M-20 596 C220 580 340 588 470 570 C600 552 700 560 800 544 C880 532 920 538 980 528" fill="none" stroke="url(#channel)" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+    <path d="M1440 560 C1300 548 1240 554 1150 542 C1080 532 1050 538 1000 530" fill="none" stroke="url(#channel)" stroke-width="16" stroke-linecap="round" opacity="0.75"/>
+    <!-- ripple glints in the channels -->
+    <g stroke="#f2efe9" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55">
+      <path d="M240 546 q14 -3 28 0"/><path d="M420 522 q13 -3 26 0"/>
+      <path d="M600 504 q12 -3 24 0"/><path d="M770 490 q11 -2 22 0"/>
+      <path d="M1120 544 q13 -3 26 0"/>
+    </g>
+
+    <!-- estuary sedge clumps -->
+    <g stroke="#4a3b45" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.95">
+      <path d="M120 578 q2 -14 4 0 M128 578 q3 -16 6 0 M138 578 q2 -12 4 0"/>
+      <path d="M380 592 q2 -14 4 0 M388 592 q3 -16 6 0 M398 592 q2 -12 4 0"/>
+      <path d="M660 582 q2 -13 4 0 M668 582 q3 -15 6 0 M678 582 q2 -11 4 0"/>
+      <path d="M900 570 q2 -13 4 0 M908 570 q3 -15 6 0"/>
+      <path d="M1220 586 q2 -14 4 0 M1228 586 q3 -16 6 0 M1238 586 q2 -12 4 0"/>
+    </g>
+
+    <!-- a heron, standing in the near channel -->
+    <g stroke="#0f0c11" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M312 548 L312 528 C312 520 318 516 324 518 C329 520 328 526 322 526"/>
+      <path d="M312 548 L310 560 M314 548 L316 560"/>
+    </g>
+
+    <!-- a canoe with two paddlers, small, mid channel -->
+    <g>
+      <path d="M700 500 q30 9 60 0 q-8 8 -30 8 q-22 0 -30 -8" fill="#0f0c11"/>
+      <path d="M718 498 l0 -10 M742 498 l0 -9" stroke="#0f0c11" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="718" cy="485" r="3.2" fill="#0f0c11"/>
+      <circle cx="742" cy="486" r="3" fill="#0f0c11"/>
+      <path d="M712 492 L704 504 M748 493 L756 503" stroke="#0f0c11" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ===================== MASTHEAD ===================== -->
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-grid">
+      <div>
+        <div class="kicker">Sea to Sky Trails &middot; Vol.&nbsp;II, No.&nbsp;17 &middot; A Mountain Portrait</div>
+        <h1>Mount Garibaldi</h1>
+        <p class="native">Known to the Sḵwx̱wú7mesh people as <b>Nch'ḵay̓</b></p>
+        <p class="deck">The glaciated volcano the whole park is named for &mdash; a portrait of the peak itself: how it came to look the way it does, where to stand to see it properly, and why most people who love it never touch its summit.</p>
+      </div>
+      <aside class="spec" aria-label="Mountain facts at a glance">
+        <div class="spec-title">The Mountain, Briefly</div>
+        <dl>
+          <div class="row"><dt>Summit</dt><dd>&asymp;2,678 m</dd></div>
+          <div class="row"><dt>Type</dt><dd>Dormant stratovolcano</dd></div>
+          <div class="row"><dt>Position</dt><dd>&asymp;49.85&deg; N &middot; 123.00&deg; W</dd></div>
+          <div class="row"><dt>Park</dt><dd>Garibaldi Provincial</dd></div>
+          <div class="row"><dt>Territory</dt><dd>Sḵwx̱wú7mesh Úxwumixw</dd></div>
+          <div class="row"><dt>Summit access</dt><dd>Mountaineering only</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ESSAY: THE PORTRAIT ===================== -->
+<section class="essay" id="portrait">
+  <div class="narrow">
+    <div class="eyebrow">The Portrait</div>
+    <p class="opener">Stand anywhere open in Squamish &mdash; the oceanfront, the estuary dikes, the grocery store parking lot &mdash; and look northeast. The dark pyramid hanging above town, improbably steep, usually wearing a ruff of glacier ice, is the mountain everything else around here is named after. Or rather, it&rsquo;s part of it. What you&rsquo;re seeing from town is mostly Atwell Peak, the sharpest of Mount Garibaldi&rsquo;s sub-summits &mdash; the one that photographs like a black sail set against the icefields. The true summit, up around 2,678 metres, sits back behind it in a jumble of domes and ridges (Dalton Dome among them, though we&rsquo;ll hedge on the fine print of that geography), and from most angles in town you can&rsquo;t see it at all.</p>
+    <p>That&rsquo;s the first thing to understand about this mountain: it&rsquo;s less a single peak than a massif with moods. Atwell&rsquo;s silhouette changes completely depending on where you stand. From the estuary it&rsquo;s a blade. From the highway north of town it broadens into a shoulder. From Elfin Lakes it becomes a wall &mdash; close enough to hear rockfall off the south face on a warm afternoon. From Panorama Ridge, way around the back, the whole massif rearranges itself into something you&rsquo;d swear was a different mountain entirely. Locals play a quiet game of recognizing it from unfamiliar angles, and it&rsquo;s harder than it sounds.</p>
+
+    <div class="pull">
+      &ldquo;Every town gets a skyline. Squamish got a volcano, and it never quite gets ordinary &mdash; you look up from pumping gas and there it is, wearing its glaciers in July.&rdquo;
+      <span class="who">Field notes, from the dike at dusk</span>
+    </div>
+
+    <p>The second thing to understand is that this is not a hiking objective, and this page is not a trail guide. There is no trail to the top of Mount Garibaldi and there never will be &mdash; the upper mountain is glacier, crevasse, and famously unreliable volcanic rock, and reaching the summit is genuine mountaineering (more on that below, honestly). Instead, think of this as a portrait: the story of why the mountain looks the way it does, what it has meant to the people of this valley for as long as there have been people in this valley, and &mdash; the practical heart of the thing &mdash; where to position yourself to really <em>see</em> it. Because seeing it well turns out to be its own reward, and it&rsquo;s available to anyone.</p>
+  </div>
+</section>
+
+<!-- ===================== NCH'KAY (paper interlude) ===================== -->
+<section class="nchkay" id="nchkay">
+  <div class="wrap">
+    <div class="nchkay-grid">
+      <div>
+        <div class="eyebrow">Before Any Other Name</div>
+        <div class="bigword">Nch'ḵay̓</div>
+        <p class="gloss">Sḵwx̱wú7mesh sníchim (Squamish language). Commonly translated along the lines of &ldquo;dirty place&rdquo; or &ldquo;grimy one,&rdquo; understood to refer to the ash-dark meltwater that runs off the volcano. Translations are approximate; the name belongs to the language, not to us.</p>
+      </div>
+      <div>
+        <p>Long before a surveyor attached an Italian general&rsquo;s name to this mountain, it was &mdash; and remains &mdash; Nch'ḵay̓ to the Sḵwx̱wú7mesh (Squamish) people, and it is one of the most important places in their territory. In Squamish oral history, this is the mountain where the survivors of the great flood anchored their canoes when the waters rose over the land &mdash; the high ground that carried the people through, so there could be people after.</p>
+        <p>We want to be careful here, because this is not folklore garnish for a landing page. It is the history of a living nation, held and told by the Sḵwx̱wú7mesh Úxwumixw in their own words, and a paragraph on a fan site is not the place it lives. What we can say is this: when you stand on the dike in Squamish and look up at that dark pyramid, you are looking at a mountain that has been at the centre of human meaning in this valley for longer than most nations have existed. That should change how the view feels. It does for us.</p>
+        <div class="source-note">
+          <strong>Hear it from the source</strong>
+          For the history of Nch'ḵay̓ as the Squamish Nation tells it, go directly to the Nation: <a href="https://www.squamish.net/" target="_blank" rel="noopener">squamish.net</a>, the Nation&rsquo;s own publications, and its cultural programming. Their telling is the authoritative one &mdash; ours is only a signpost pointing at it.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TIMELINE ===================== -->
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="eyebrow">A Short Chronology</div>
+    <h2>Four moments in the life of a volcano.</h2>
+    <div class="tl">
+      <div class="node">
+        <div class="when">End of the last ice age</div>
+        <h3>Fire against ice</h3>
+        <p>Geologists describe part of the volcano erupting against and over glacial ice as the great sheets were melting away &mdash; the event that set up the crumbling south face you see today.</p>
+      </div>
+      <div class="node">
+        <div class="when">Since time immemorial</div>
+        <h3>Nch'ḵay̓</h3>
+        <p>The mountain of the flood story &mdash; where, in Squamish oral history, the survivors anchored their canoes. One of the most important places in Sḵwx̱wú7mesh territory, then and now.</p>
+      </div>
+      <div class="node">
+        <div class="when">The colonial 1800s</div>
+        <h3>A borrowed name</h3>
+        <p>The story goes that survey crews charting Howe Sound named the peak for Giuseppe Garibaldi, the Italian general &mdash; a man who never saw it. The name stuck to the mountain, then to everything around it.</p>
+      </div>
+      <div class="node">
+        <div class="when">The park era</div>
+        <h3>The namesake park</h3>
+        <p>In the early twentieth century (the 1920s, roughly &mdash; we&rsquo;ll hedge the date) the province set aside the vast wilderness around the mountain as Garibaldi Provincial Park, today one of BC&rsquo;s best-loved parks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FIRE & ICE ===================== -->
+<section class="geology" id="fireice">
+  <div class="narrow" style="max-width:1150px;">
+    <div class="geo-grid">
+      <div>
+        <div class="eyebrow">Fire &amp; Ice</div>
+        <h2 style="margin-bottom:1.4rem;">Why the south face is falling down.</h2>
+        <p>Mount Garibaldi is a dormant stratovolcano &mdash; the towering, cone-building kind &mdash; sitting in the Garibaldi Volcanic Belt, which geologists generally describe as the northern reach of the same volcanic system that runs down through the Cascades. That alone would make it unusual: glaciated volcanoes you can see from a dike at sea level are not a common amenity.</p>
+        <p>But the detail that makes this mountain genuinely strange is <em>when</em> it did some of its building. As geologists tell it, part of the volcano erupted at the end of the last ice age, while a great sheet of glacial ice still filled the valley &mdash; so fresh volcanic material piled up not on solid ground but against and on top of the ice itself. When the ice melted out from underneath, the support vanished, and a whole flank of the mountain was left leaning on air. That, the story goes, is why the south face is such a spectacular ruin &mdash; a steep, crumbly amphitheatre of cliffs and gullies that sheds rock more or less continuously, and why the meltwater running off the mountain carries the ash-dark colour the Sḵwx̱wú7mesh named it for.</p>
+        <p>You don&rsquo;t need a geology degree to read this off the mountain. Look at Atwell from town: the clean pyramid up top, then below it that shattered, streaked face dropping toward the Squamish valley &mdash; the <a class="ln" href="https://mamquam.com/">Mamquam River</a> drains ice off this massif and carries the evidence right past town. The mountain is telling you its own story; the geologists just wrote it down.</p>
+      </div>
+      <aside class="geo-aside">
+        <strong>Field note &middot; &ldquo;dormant,&rdquo; not &ldquo;dead&rdquo;</strong>
+        <p>Dormant means sleeping, not extinct &mdash; the Garibaldi Volcanic Belt is considered a live volcanic system, monitored accordingly. Nobody is suggesting you cancel plans; eruptions here are measured on timescales that make mortgages look brief.</p>
+        <p>The everyday hazard is more mundane and more real: that rotten south face sheds rock, which is one of several reasons the mountain&rsquo;s serious side is left to mountaineers. Admire the ruin from a respectful distance. It&rsquo;s better-looking from there anyway.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FIVE VANTAGES ===================== -->
+<section class="vantages" id="vantages">
+  <div class="head">
+    <div class="eyebrow">Where to Look</div>
+    <h2>Five vantages, in rising order of effort.</h2>
+    <p style="margin-top:1.2rem;">You don&rsquo;t climb this mountain; you position yourself for it. These are our favourite places to do that &mdash; sightlines are approximate and weather owes you nothing, but each of these has delivered for us more than once.</p>
+  </div>
+  <div class="vantage-list">
+
+    <div class="vantage">
+      <div class="no">i<small>From town</small></div>
+      <div>
+        <h3>The Squamish estuary &amp; oceanfront</h3>
+        <p>The classic. From the dike trails and the oceanfront, the tide channels and grass flats run out toward Howe Sound and Atwell&rsquo;s pyramid stands straight up out of the frame &mdash; this is the postcard angle, and it costs a five-minute walk from downtown. Golden hour is the show: alpenglow holds on the glaciers long after town has gone into shadow. The estuary is a destination in its own right &mdash; birds, tides, wind &mdash; and it has <a class="ln" href="https://squamishestuary.ca/">its own field guide</a>.</p>
+        <div class="effort"><b>Effort:</b> a flat stroll &middot; year-round &middot; bring nothing but patience</div>
+      </div>
+    </div>
+
+    <div class="vantage">
+      <div class="no">ii<small>From above</small></div>
+      <div>
+        <h3>The Sea to Sky Gondola</h3>
+        <p>Ride up from the highway south of town and the viewing decks put the whole massif across the valley from you at altitude &mdash; suddenly it has a middle and a base, not just a summit. This is the vantage for understanding the mountain&rsquo;s full height, and it comes with a lodge coffee. Lift tickets and hours change seasonally; check before you go.</p>
+        <div class="effort"><b>Effort:</b> a gondola ride &middot; most of the year &middot; clear days only worth it</div>
+      </div>
+    </div>
+
+    <div class="vantage">
+      <div class="no">iii<small>From the highway</small></div>
+      <div>
+        <h3>Brohm Lake&rsquo;s shoreline</h3>
+        <p>North of town off Highway 99, Brohm Lake hides a quieter angle &mdash; from stretches of its forested shoreline the massif rises beyond the trees, and on still mornings the water does the doubling for you. Exact sightlines depend on where you stand and what the forest allows, so treat this one as a treasure hunt with a swim attached.</p>
+        <div class="effort"><b>Effort:</b> a short lakeside wander &middot; snow-free months &middot; morning calm is the trick</div>
+      </div>
+    </div>
+
+    <div class="vantage">
+      <div class="no">iv<small>The viewing hike</small></div>
+      <div>
+        <h3>Red Heather &amp; Elfin Lakes</h3>
+        <p>The closest you can legally hike to the mountain: the Diamond Head trail climbs to Red Heather Meadows and on to Elfin Lakes, where Atwell&rsquo;s wall fills the northern sky at conversational distance. This is the vantage that turns admirers into devotees &mdash; a full day (or a hut night) spent with the mountain as your entire horizon. It&rsquo;s a serious walk with its own rules and seasons, so read <a class="ln" href="https://elfin-lake.com/">the Elfin Lakes guide</a> before you commit.</p>
+        <div class="effort"><b>Effort:</b> a long day hike &middot; summer on foot, winter on skis &middot; the devotee&rsquo;s choice</div>
+      </div>
+    </div>
+
+    <div class="vantage">
+      <div class="no">v<small>The far side</small></div>
+      <div>
+        <h3>Panorama Ridge</h3>
+        <p>From Panorama Ridge, high above Garibaldi Lake on the Whistler side of the park, you get the angle almost nobody in Squamish ever sees: the massif from the back, rearranged past recognition, with the lake&rsquo;s improbable blue in the foreground. It&rsquo;s the vantage that proves the shape-shifting thesis &mdash; and it&rsquo;s a big alpine day that deserves <a class="ln" href="https://panoramaridgewhistler.com/">its own guide</a>, which it has.</p>
+        <div class="effort"><b>Effort:</b> a huge day hike &middot; midsummer to early fall &middot; earned, thoroughly</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CLIMBING ===================== -->
+<section class="climbing" id="climbing">
+  <div class="narrow">
+    <div class="eyebrow">The Honest Section</div>
+    <h2>Climbing it is mountaineering. Full stop.</h2>
+    <p style="margin-top:1.6rem;">Let&rsquo;s be plain, because search engines are full of soft answers to this question: <em>there is no hike to the top of Mount Garibaldi.</em> The upper mountain is glacier travel with real crevasses, routefinding that punishes guesswork, and volcanic rock with a reputation among mountaineers as some of the most rotten in the region &mdash; holds that come away in your hand, ridges made of stacked rubble. Parties typically approach from the Diamond Head / Elfin Lakes side of the park, and the classic window is said to be spring, when snow still bridges the broken ground and holds the loose rock together &mdash; but route choices and conditions shift year to year, and none of this page is beta. Anyone attempting it needs glacier gear, crevasse-rescue and avalanche training, a competent party, and a current conditions picture &mdash; or a certified guide, which is the honest path for most.</p>
+    <p>And here&rsquo;s the part we actually want to say: <em>most people who love this mountain never stand on it, and that&rsquo;s fine.</em> Better than fine &mdash; it might be the correct relationship. Some mountains are for climbing; this one, for nearly everyone, is for looking at, and it repays looking better than almost any summit in the province repays standing. The five vantages above are the real itinerary. The summit is for the few with the skills, and it always has been.</p>
+    <div class="climb-warn">
+      <strong>If you&rsquo;re still set on it</strong>
+      Go with training or go with a guide. Check current conditions, avalanche forecasts, and BC Parks access notes before any attempt &mdash; approach roads, day-pass rules, and seasonal closures all change. Nothing on this page is route information, and the mountain does not grade on effort.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE WATER (funnel) ===================== -->
+<section class="water" id="water">
+  <div class="wrap">
+    <div class="water-grid">
+      <div>
+        <div class="eyebrow">Our Favourite Seat</div>
+        <h2>The best view of the volcano is from the water.</h2>
+        <p style="margin-top:1.4rem;">After years of testing vantages, ours is number one with a twist: get <em>onto</em> the estuary rather than beside it. From a canoe in the tide channels at golden hour, the grass goes bronze, the herons stop pretending you matter, and Atwell&rsquo;s pyramid catches the last pink light straight up out of the water in front of you &mdash; the gentlest water sports in Squamish, pointed at the most dramatic thing in the sky. It is, we think, the single best cheap seat in the corridor.</p>
+        <p>Time it around the tide, dress for cold water even in August, and give the birds their distance &mdash; the estuary is a wildlife management area first and a viewpoint second.</p>
+      </div>
+      <div class="cta-card">
+        <h3>Paddle it at golden hour</h3>
+        <p><a class="ln" href="https://squamishcanoerental.com/">Squamish Canoe Rental</a> puts canoes on this water &mdash; each boat seats up to three, and the put-in is minutes from the dike. Book ahead in summer; the good-light evenings go first.</p>
+        <a class="cta" href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Book a canoe</a>
+        <span class="aside-ln">Prefer engines? <a class="ln" href="https://squamishwatertaxi.com/tours.html">Squamish Water Taxi</a> runs boat tours on Howe Sound with the same skyline.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+  <div class="narrow">
+    <div class="eyebrow">Questions &amp; Answers</div>
+    <h2>What people actually ask about Mount Garibaldi.</h2>
+
+    <div class="faq-list">
+
+      <details class="qa">
+        <summary>How tall is Mount Garibaldi?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>The summit stands at roughly 2,678 metres &mdash; sources vary by a few metres, as they usually do. It&rsquo;s the huge glaciated massif towering northeast of Squamish, and the namesake of Garibaldi Provincial Park. What most people photograph from town is actually Atwell Peak, one of its dramatic sub-summits, rather than the true summit hiding behind.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Is Mount Garibaldi a volcano? Could it erupt?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>Yes &mdash; it&rsquo;s a dormant stratovolcano in the Garibaldi Volcanic Belt, generally described as the northern end of the Cascade volcanic system. Dormant means sleeping rather than extinct, and the belt is treated as a live, monitored system, but volcanic timescales are vast; there is no suggestion of anything imminent. The everyday hazard is falling rock off its crumbly faces, not lava.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Can you hike to the top of Mount Garibaldi?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>No. There is no trail to the summit, and reaching it is genuine mountaineering: glacier travel with crevasses, serious routefinding, and notoriously rotten volcanic rock. Parties typically approach from the Diamond Head / Elfin Lakes side, often in spring when snow bridges the broken ground &mdash; but that requires glacier gear, training, and experience, or a certified guide. For everyone else, the mountain is for viewing, and the viewing is superb.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Where is the best place to see Mount Garibaldi?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>Our five favourites, in rising order of effort: the Squamish estuary and oceanfront (the classic from-town view), the Sea to Sky Gondola&rsquo;s decks, Brohm Lake&rsquo;s shoreline north of town, the Red Heather / Elfin Lakes trail (the closest legal hiking vantage), and Panorama Ridge on the far side of the park. For our money the very best seat is a canoe on the estuary at golden hour, when alpenglow holds on the glaciers after town is in shadow.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>What does Nch'ḵay̓ mean?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>Nch'ḵay̓ is the mountain&rsquo;s name in the Sḵwx̱wú7mesh (Squamish) language, commonly translated along the lines of &ldquo;dirty place&rdquo; or &ldquo;grimy one,&rdquo; understood to refer to the ash-dark meltwater running off the volcano. In Squamish oral history it is the mountain where survivors of the great flood anchored their canoes &mdash; one of the most important places in the territory. For the history as the Nation tells it, go to the Squamish Nation&rsquo;s own publications and programs at squamish.net.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Which peak am I actually seeing from downtown Squamish?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>Mostly Atwell Peak &mdash; the sharp, dark pyramid that dominates the skyline from the estuary and oceanfront. It&rsquo;s a sub-summit of the Garibaldi massif; the true summit sits behind it, largely hidden from town. Atwell&rsquo;s shape changes dramatically with your viewing angle &mdash; a blade from the estuary, a shoulder from the highway, a wall from Elfin Lakes &mdash; which is half the fun of learning to recognize it.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Is Mount Garibaldi the same as Garibaldi Lake or Black Tusk?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>No &mdash; they&rsquo;re neighbours in the same park, all carrying the Garibaldi name. Garibaldi Lake is the famous turquoise lake on the Whistler side; Black Tusk is the dark spire above it; Mount Garibaldi is the big glaciated volcano above Squamish that the park is named for. From Panorama Ridge you can take in the lake and the massif in one view and sort the family tree out for yourself.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>Why does Mount Garibaldi look so broken and crumbly?<span class="tick">+</span></summary>
+        <div class="ans">
+          <p>Geologists describe part of the volcano erupting against and over glacial ice at the end of the last ice age. When the ice melted away, a flank of the mountain lost its support &mdash; which is why the south face is a steep, shedding ruin of cliffs and gullies rather than a tidy cone, and why the meltwater runs ash-dark. It&rsquo;s also part of why the rock is so notoriously unreliable for climbers.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="colophon">
+  <div class="wrap">
+    <div class="territory">
+      Nch'ḵay̓ stands in the territory of the Sḵwx̱wú7mesh Úxwumixw &mdash; the Squamish Nation &mdash; whose history holds this mountain at its centre. This page is written by guests in that territory, and reads best remembered as such.
+    </div>
+    <div class="col-grid">
+      <div>
+        <h4>This Portrait</h4>
+        <p>Mount Garibaldi is entry No. 17 in Volume II of the <a class="ln" href="https://seatoskytrails.com/">Sea to Sky Trails</a> &mdash; a slow-built field guide to the peaks, lakes, and waterways of the Coast Mountains, written by people who keep looking up.</p>
+      </div>
+      <div>
+        <h4>More Field Guides</h4>
+        <ul>
+          <li><a class="ln" href="https://elfin-lake.com/">Elfin Lakes</a></li>
+          <li><a class="ln" href="https://skypilotmountain.com/">Sky Pilot Mountain</a></li>
+          <li><a class="ln" href="https://panoramaridgewhistler.com/">Panorama Ridge</a></li>
+          <li><a class="ln" href="https://mamquam.com/">Mamquam Valley</a></li>
+          <li><a class="ln" href="https://squamishestuary.ca/">Squamish Estuary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Squamish Logistics</h4>
+        <ul>
+          <li><a class="ln" href="https://squamishcanoerental.com/">Canoe rental on the estuary</a></li>
+          <li><a class="ln" href="https://squamishwatertaxi.com/tours.html">Howe Sound boat tours</a></li>
+          <li><a class="ln" href="https://seatoskytrails.com/">All guides at Sea to Sky Trails</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-bottom">
+      <div><em>Sea to Sky Trails</em> &middot; Vol.&nbsp;II, No.&nbsp;17 &middot; <a class="ln" href="https://seatoskytrails.com/">seatoskytrails.com</a></div>
+      <div>Set in Fraunces &amp; Inter. Reader-funded.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== STRUCTURED DATA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Mountain", "TouristAttraction"],
+  "name": "Mount Garibaldi",
+  "alternateName": ["Nch'ḵay̓", "Mount Garibaldi, Garibaldi Provincial Park"],
+  "description": "A dormant, heavily glaciated stratovolcano rising to roughly 2,678 m northeast of Squamish, BC — the namesake of Garibaldi Provincial Park. Known to the Squamish Nation as Nch'ḵay̓, one of the most important places in Sḵwx̱wú7mesh territory. Its sub-summit Atwell Peak forms the dramatic dark pyramid seen from Squamish. There is no hiking trail to the summit; ascents are mountaineering objectives. The mountain is best appreciated from viewpoints including the Squamish estuary, the Sea to Sky Gondola, Brohm Lake, Elfin Lakes, and Panorama Ridge.",
+  "url": "https://mountgaribaldi.com/",
+  "isAccessibleForFree": true,
+  "publicAccess": true,
+  "touristType": ["Sightseers", "Photographers", "Hikers", "Mountaineers", "Paddlers"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.85,
+    "longitude": -123.0,
+    "elevation": "2678 m"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Squamish",
+    "addressRegion": "BC",
+    "addressCountry": "CA"
+  },
+  "containedInPlace": {
+    "@type": "Park",
+    "name": "Garibaldi Provincial Park"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How tall is Mount Garibaldi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The summit stands at roughly 2,678 metres (sources vary by a few metres). It is the large glaciated massif northeast of Squamish, BC, and the namesake of Garibaldi Provincial Park. What most people photograph from town is Atwell Peak, one of its dramatic sub-summits, rather than the true summit behind it." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Mount Garibaldi a volcano? Could it erupt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Mount Garibaldi is a dormant stratovolcano in the Garibaldi Volcanic Belt, generally described as the northern end of the Cascade volcanic system. Dormant means sleeping rather than extinct, and the belt is treated as a live, monitored volcanic system, but volcanic timescales are vast and nothing suggests imminent activity. The everyday hazard is rockfall from its crumbly faces." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you hike to the top of Mount Garibaldi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. There is no trail to the summit. Reaching it is genuine mountaineering: glacier travel with crevasses, serious routefinding, and notoriously loose volcanic rock. Parties typically approach from the Diamond Head / Elfin Lakes side of the park, often in spring when snow bridges the broken ground, and need glacier gear, training, and an experienced party or a certified guide. For most visitors the mountain is a viewing objective, not a climbing one." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the best place to see Mount Garibaldi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Five favourite vantages, in rising order of effort: the Squamish estuary and oceanfront (the classic from-town view of Atwell Peak), the Sea to Sky Gondola viewing decks, Brohm Lake's shoreline north of town, the Red Heather / Elfin Lakes trail (the closest legal hiking vantage), and Panorama Ridge on the far side of Garibaldi Park. A canoe on the estuary at golden hour is arguably the best seat of all, when alpenglow lingers on the glaciers." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Nch'ḵay̓ mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nch'ḵay̓ is the mountain's name in the Sḵwx̱wú7mesh (Squamish) language, commonly translated along the lines of 'dirty place' or 'grimy one', understood to refer to the ash-dark meltwater running off the volcano. In Squamish oral history it is the mountain where survivors of the great flood anchored their canoes — one of the most important places in the territory. For the history as the Nation tells it, consult the Squamish Nation's own publications at squamish.net." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which peak am I actually seeing from downtown Squamish?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mostly Atwell Peak — the sharp, dark pyramid dominating the skyline from the estuary and oceanfront. It is a sub-summit of the Mount Garibaldi massif; the true summit sits behind it and is largely hidden from town. Atwell's silhouette changes dramatically with viewing angle, appearing as a blade from the estuary, a shoulder from the highway, and a wall from Elfin Lakes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Mount Garibaldi the same as Garibaldi Lake or Black Tusk?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. They are neighbours within Garibaldi Provincial Park, all sharing the name. Garibaldi Lake is the famous turquoise lake on the Whistler side, Black Tusk is the dark spire above it, and Mount Garibaldi is the large glaciated volcano above Squamish that the park is named for." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Mount Garibaldi look so broken and crumbly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Geologists describe part of the volcano erupting against and over glacial ice at the end of the last ice age. When the ice melted, a flank of the mountain lost its support, leaving the steep, continuously shedding south face of cliffs and gullies seen today, and ash-dark meltwater running off the mountain. The same history contributes to the notoriously unreliable rock that climbers report." }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

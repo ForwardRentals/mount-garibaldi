@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Atwell pyramid + Dalton Dome mark, line-art on transparent -->
+  <g fill="none" stroke="#1c1917" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 52 L22 30 L30 12 L37 26 L44 22 L54 30 L60 52 Z"/>
+  </g>
+  <!-- glacier fill under the dome -->
+  <path d="M37 26 L44 22 L52 29 L46 32 L48 38 L41 34 L38 30 Z" fill="#b9c8d2"/>
+  <!-- alpenglow face on the pyramid -->
+  <path d="M30 12 L36 24 L31 26 L27 20 Z" fill="#cf8f97"/>
+  <!-- tide channel underline -->
+  <path d="M8 58 C20 55 32 60 44 57 C50 55.5 54 57 58 56" fill="none" stroke="#cf8f97" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
